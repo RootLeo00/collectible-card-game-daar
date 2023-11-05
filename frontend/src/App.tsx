@@ -9,7 +9,6 @@ import { UserInfoPage } from "./pages/UserInfoPage";
 import { CardInfoPage } from "./pages/CardInfoPage";
 import { CollectionInfoPage } from "./pages/CollectionInfoPage";
 import { AuctionPage } from './pages/auctions/AuctionPage';
-import { MarketPlacePage } from './pages/MarketPlacePage';
 import { BidforAuctionPage } from './pages/auctions/BidforAuctionPage';
 import { CreateAuctionPage } from './pages/auctions/CreateAuctionPage';
 import { AuctionInfoPage } from './pages/auctions/AuctionInfoPage';
@@ -61,7 +60,6 @@ export const App = () => {
           <Route path="/AuctionInfoPage/:ID" element={<AuctionInfoPage />} />
 
           <Route path="/UserPage/AuctionPage" element={<AuctionPage />} />
-          <Route path="/UserPage/MarketPlacePage" element={<MarketPlacePage />} />
           <Route path="/UserPage/BoosterPage" element={<BoosterPage />} />
           <Route path="/UserPage/AuctionPage/BidforAuctionPage/:ID" element={<BidforAuctionPage />} />
           <Route path="/UserPage/AuctionPage/CreateAuctionPage" element={<CreateAuctionPage />} />

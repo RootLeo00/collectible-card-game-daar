@@ -31,7 +31,7 @@ function MyAppBar() {
 
   const wallet = useWallet()
   useEffect(() => {
-    const userPages = ["Inventory", "Marketplace", "Auction Place", "Booster Page"]
+    const userPages = ["Inventory", "Auction Place", "Booster Page"]
     const adminPages = ["Admin Page", "Minting Page"]
 
     let pagesNew: string[] = [];
@@ -50,7 +50,6 @@ function MyAppBar() {
 
     var pagePathsNew = {
       "Inventory": `/${userOrAdminString}`,
-      "Marketplace": `/${userOrAdminString}/MarketPlacePage`,
       "Auction Place": `/${userOrAdminString}/AuctionPage`,
       "Booster Page": `/${userOrAdminString}/BoosterPage`,
       "Minting Page": `/${userOrAdminString}/MintingPage`,
