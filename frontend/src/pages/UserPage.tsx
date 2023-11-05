@@ -79,7 +79,8 @@ export const UserPage = () => {
           {collections.length > 0 && (collections.map((collection) =>
             (<ListItem> {collection} </ListItem>)))
           }
-          Users in this blockchain
+          <br />
+          Users who have cards in this blockchain
           {users.length > 0 && (users.map((user) =>
             (<ListItem> {user} </ListItem>)))
           }
