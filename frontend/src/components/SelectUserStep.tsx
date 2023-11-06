@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { List, ListItem, Checkbox, TextField } from '@mui/material';
+import { useState } from 'react';
+import {  TextField } from '@mui/material';
 
 const SelectCardsStep = ({ setPassable, setUserUpper }) => {
   const [userAddress, setUserAddress] = useState('');
@@ -12,7 +12,6 @@ const SelectCardsStep = ({ setPassable, setUserUpper }) => {
   };
 
   const checkCompletion = (address) => {
-    // setPassable(address);
     if (address && regex.test(address)) {
       setUserUpper(address)
       setPassable(true);

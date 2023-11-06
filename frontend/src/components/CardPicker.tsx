@@ -1,40 +1,13 @@
-import ShowPath from "../../components/ShowPath";
-
 import { useWallet } from '@/utilities';
-import styles from '../../styles.module.css'
-import { Button, Grid, ListItem } from '@mui/material';
+import { Button, Grid } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import AuctionView from '@/components/AuctionView';
+import { useEffect, useState } from 'react';
 import { Stepper, Step, StepLabel, Typography, Container } from '@mui/material';
-import { SingleBed } from "@mui/icons-material";
 import SingleCardSelectorStep from "@/components/SingleCardSelectorStep";
 import { ApproveCardForTransferStep } from "@/components/ApproveCardFortransfer";
 import { ReturBackToAuctionsStep } from "@/components/ReturBackToAuctionsStep";
-import { BigNumber, ethers } from "ethers";
 
 const steps = ['Select the card for exchange', 'Approve the card', 'Return back to the auctions'];
-
-const allCardsMock = [
-    {
-        id: 1,
-        url: "aaa"
-    },
-    {
-        id: 2,
-        url: "bbb"
-    },
-    {
-        id: 3,
-        url: "ccc"
-    },
-    {
-        id: 4,
-        url: "ddd"
-    },
-];
-
 export const CardPicker = ({ lastPageMessage, lastPageButton, bidding, auctionId }) => {
     const [allCards, setAllCards] = useState([]);
     const [activeStep, setActiveStep] = useState(0);
@@ -94,7 +67,6 @@ export const CardPicker = ({ lastPageMessage, lastPageButton, bidding, auctionId
             case 1:
                 return <ApproveCardForTransferStep setPassable={setPassable} selectedCard={selectedCard} />;
             case 2:
-                // return <ReturBackToAuctionsStep setPassable={setPassable} lastPageMessage={"People will see your trade offer in the auctions page, they will bid their offer. It is up to you to reject, accept or cancel their offers."}/>;
                 return <ReturBackToAuctionsStep setPassable={setPassable} lastPageMessage={lastPageMessage} />;
             default:
                 return <div>Error? {step}</div>;
@@ -143,5 +115,4 @@ export const CardPicker = ({ lastPageMessage, lastPageButton, bidding, auctionId
         </Container>
     );
 };
-//ATTENZIONE devo far sì che le scelte e i campi inseriti si mantengano tornando indietro?
 

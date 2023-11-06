@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { TextField, Button, Paper, ListItemText, Checkbox, ListItem } from '@mui/material';
+import { useState } from 'react';
+import { TextField } from '@mui/material';
 import TransferList from '../components/TransferList';
-import { List } from 'devextreme-react';
 
 const SelectCardsStep = ({ cards, setSelectedCardsUpper, setPassable, max }) => {
   const [selectedCards, setSelectedCards] = useState([]);

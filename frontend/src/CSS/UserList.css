@@ -1,41 +1,38 @@
-userpage
 /* CollectionsTreeView.css */
 .userpage {
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .users-title{
-    background-color: pink;
-    border: 1px solid #ddd;
-    margin: 5px 0;
-    padding: 5px;
-    border-radius: 5px;
-    text-align: center;}
-  
-  .user-node {
-    background-color: white;
-    border: 1px solid pink;
-    margin: 5px 0;
-    padding: 5px;
-    border-radius: 7px;
-    
-  }
-  
-  
-  .user-link {
-    cursor: pointer;
-    color: #000204;
-    text-decoration: underline;
-    font-family: "Impact"
-  }
-  
-  
-  .user-link:hover {
-    text-decoration: underline;
-    font-family: "Impact", sans-serif;
-  }
-  
- 
- 
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.users-title {
+  background-color: pink;
+  border: 1px solid #ddd;
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.user-node {
+  background-color: white;
+  border: 1px solid pink;
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 7px;
+
+}
+
+
+.user-link {
+  cursor: pointer;
+  color: #000204;
+  text-decoration: underline;
+  font-family: "Impact"
+}
+
+
+.user-link:hover {
+  text-decoration: underline;
+  font-family: "Impact", sans-serif;
+}

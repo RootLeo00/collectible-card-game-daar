@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Stepper, Step, StepLabel, Button, Typography, Container } from '@mui/material';
 
 import CreateCollectionStep from '../components/CreateCollectionStep';
@@ -10,12 +10,6 @@ import { useWallet } from '@/utilities';
 import * as Skry from "scryfall-sdk";
 import { useNavigate } from 'react-router-dom';
 import MyAppBar from '@/components/MyAppBar';
-
-const allUsers = [
-  { id: 1, name: 'User 1', otherInfo: '...' },
-  { id: 2, name: 'User 2', otherInfo: '...' },
-  { id: 3, name: 'User 3', otherInfo: '...' },
-];
 
 const steps = ['Create a new collection', 'Select cards to mint', 'Select the user to mint the cards for'];
 
@@ -83,8 +77,8 @@ export const MintingPage = () => {
         }
         // promise all 
         Promise.all(waitpromise).then(() => {
-        // navigate back
-        navigator("/AdminPage")
+          // navigate back
+          navigator("/AdminPage")
         })
       }
     }
@@ -158,4 +152,3 @@ export const MintingPage = () => {
     </Container>
   );
 };
-//ATTENZIONE devo far sì che le scelte e i campi inseriti si mantengano tornando indietro?
