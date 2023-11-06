@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react'
 import { checkAccount } from '@/utilities'
 import styles from '../styles.module.css'
-import { Grid, Button, Stack, ListItem } from '@mui/material';
+import { Grid, Button, Stack, ListItem, List } from '@mui/material';
 import { useWallet } from "../utilities"
 import * as Skry from "scryfall-sdk";
 import MyAppBar from '@/components/MyAppBar';
@@ -10,9 +10,7 @@ import ShowPath from '../components/ShowPath';
 import CardMTG from '@/components/CardMTG';
 
 export const UserPage = () => {
-  const [number, setNumber] = useState<number>(0)
   const [cards, setCards] = useState<string[]>([]);
-  const [cardsOfUsers, setCardsOfUsers] = useState<string[]>([]);
   const [users, setUsers] = useState<string[]>([]);
   const [collections, setCollections] = useState<string[]>([]);
   const wallet = useWallet();
@@ -43,7 +41,7 @@ export const UserPage = () => {
       const users = wallet?.cardmanagerContract.getAllUsers()
         .then((userArray: string[]) => {
           // filter duplicates
-          setUsers(userArray.filter((val,id,array) => array.indexOf(val) == id))
+          setUsers(userArray.filter((val, id, array) => array.indexOf(val) == id))
         })
     }
     fetchCardsOfUsers();
@@ -51,14 +49,6 @@ export const UserPage = () => {
 
   const navigate = useNavigate();
   checkAccount(navigate)
-
-  function handleAuctionClick() {
-    navigate("/UserPage/AuctionPage")
-  }
-
-  function handleBoosterClick() {
-    navigate("/BoosterPage")
-  }
 
   return (
     <div className={styles.body}>
@@ -75,18 +65,23 @@ export const UserPage = () => {
           </Stack>
         </Grid>
         <Grid item xs={6} style={{ alignItems: 'center' }}>
-          Available collections
           {collections.length > 0 && (collections.map((collection) =>
-            (<ListItem> {collection} </ListItem>)))
+          (
+            <List>
+              Available collections on the blockchain
+              <ListItem> {collection} </ListItem>
+            </List>
+          )))
           }
-          Users in this blockchain
+          <br />
           {users.length > 0 && (users.map((user) =>
-            (<ListItem> {user} </ListItem>)))
+          (<List>
+            Users who have cards in this blockchain
+            <ListItem> {user} </ListItem>
+          </List>)
+          ))
           }
         </Grid>
-        <Button variant="contained" onClick={handleAuctionClick}>
-          Auctions
-        </Button>
       </Grid>
     </div>
 

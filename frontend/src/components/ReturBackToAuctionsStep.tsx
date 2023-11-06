@@ -1,8 +1,4 @@
-import React, { useState } from 'react';
-import { TextField, Button, ListItem, Checkbox, ListItemText, Paper, List, Typography, Grid } from '@mui/material';
-import TransferList from '../components/TransferList';
-import { Check, CheckBox, Label, LabelImportant } from '@mui/icons-material';
-import AuctionCard from './AuctionCard';
+import { Typography, Grid } from '@mui/material';
 
 export const ReturBackToAuctionsStep = ({ setPassable, lastPageMessage }) => {
     setPassable(true);

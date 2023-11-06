@@ -1,24 +1,24 @@
 import { useState } from 'react';
 import { TextField, Button, Paper, List, ListItem, ListItemText } from '@mui/material';
 
-const CreateCollectionStep = ({ sets, getMaxCardCount, setStepOneInputs,setPassable, setSelectedCollectionUpper }) => {
-  const [collectionName, setCollectionName] = useState('');
+const CreateCollectionStep = ({ sets, getMaxCardCount, setStepOneInputs, setPassable, setSelectedCollectionUpper }) => {
   const [maxCardCount, setMaxCardCount] = useState('');
   const [collectionSearchText, setCollectionSearchText] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  const [selectedCollection, setSelectedCollection] = useState({id: -1});
+  const [selectedCollection, setSelectedCollection] = useState({ id: -1 });
 
   const handleToggle = (collection) => () => {
     setSelectedCollection(collection);
     setSelectedCollectionUpper(collection)
     checkCompletion(selectedCollection, maxCardCount);
-    setStepOneInputs({ name: collection.id, maxnum:  maxCardCount} )};
+    setStepOneInputs({ name: collection.id, maxnum: maxCardCount })
+  };
 
   const handleMaxCardCountChange = (event) => {
     setMaxCardCount(event.target.value);
     checkCompletion(selectedCollection, event.target.value);
 
-    setStepOneInputs({ name: selectedCollection, maxnum:  maxCardCount})
+    setStepOneInputs({ name: selectedCollection, maxnum: maxCardCount })
   };
 
   const checkCompletion = (collection, maxCount) => {

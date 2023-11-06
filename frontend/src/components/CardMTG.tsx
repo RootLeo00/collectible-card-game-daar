@@ -1,5 +1,5 @@
 import { useTheme } from '@mui/material/styles';
-import { CardContent, CardMedia, Typography, Card, CardHeader } from '@mui/material';
+import { CardMedia, Card, CardHeader } from '@mui/material';
 import * as Scry from "scryfall-sdk";
 import { useEffect, useState } from 'react';
 
@@ -9,7 +9,7 @@ interface CardData {
     imageUrl: string | undefined;
     set_name: string;
 }
-const CardMTG = ({id}) => {
+const CardMTG = ({ id }) => {
 
     const theme = useTheme();
     const [cardData, setCardData] = useState<CardData | null>();

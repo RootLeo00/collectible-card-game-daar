@@ -9,9 +9,9 @@ export const ErrorPage = () => {
 
     return (
         <div className={styles.body}>
-        <MyAppBar />
-        <h1>404</h1>
-        <ShowPath />
-        <h1>Error: Page Not Found</h1>
+            <MyAppBar />
+            <h1>404</h1>
+            <ShowPath />
+            <h1>Error: Page Not Found</h1>
         </div>)
-  };
+};

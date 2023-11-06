@@ -86,7 +86,7 @@ export const BoosterPage = () => {
 
     return (
         <>
-            <MyAppBar />    
+            <MyAppBar />
             <h3>Boosters</h3>
             <ShowPath />
             <p>Click on a booster to collect it</p>

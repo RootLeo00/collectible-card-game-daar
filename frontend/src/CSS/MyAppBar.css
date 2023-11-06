@@ -1,35 +1,33 @@
-
 .my-app-bar {
-    background: rgb(0, 128, 87);
-  }
-  
-  .my-app-bar .brand {
-    display: flex;
-    align-items: center;
-    font-family: 'monospace';
-    font-weight: 700;
-    letter-spacing: 0.3rem;
-    color: inherit;
-    text-decoration: none;
-    margin-right: 20px;
-  }
-  
-  .my-app-bar .brand img {
-    margin-right: 10px;
-  }
-  
-  .my-app-bar .nav-buttons {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-  }
-  
-  .my-app-bar .nav-button {
-    margin: 0 10px;
-    color: white;
-  }
-  
-  .my-app-bar .nav-button:hover {
-    text-decoration: underline;
-  }
-  
+  background: rgb(0, 128, 87);
+}
+
+.my-app-bar .brand {
+  display: flex;
+  align-items: center;
+  font-family: 'monospace';
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  color: inherit;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.my-app-bar .brand img {
+  margin-right: 10px;
+}
+
+.my-app-bar .nav-buttons {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.my-app-bar .nav-button {
+  margin: 0 10px;
+  color: white;
+}
+
+.my-app-bar .nav-button:hover {
+  text-decoration: underline;
+}

@@ -1,8 +1,5 @@
-import React, { useState } from 'react';
-import { TextField, Button, ListItem, Checkbox, ListItemText, Paper, List, Typography, Grid } from '@mui/material';
-import TransferList from '../components/TransferList';
-import { Check, CheckBox, Label, LabelImportant } from '@mui/icons-material';
-import AuctionCard from './AuctionCard';
+import { useState } from 'react';
+import { Button, ListItem, Checkbox, ListItemText, Paper, Typography, Grid } from '@mui/material';
 import { useWallet } from '@/utilities';
 
 export const ApproveCardForTransferStep = ({ setPassable, selectedCard }) => {
@@ -14,10 +11,6 @@ export const ApproveCardForTransferStep = ({ setPassable, selectedCard }) => {
         wallet?.cardmanagerContract.approve(wallet.marketContract.address, selectedCard.tokenId).then((r) => {
             handleApproveClickCheckbox()
         })
-
-        console.log("Approved!");
-        // For now just approve
-        
     }
 
     function handleApproveClickCheckbox() {
@@ -31,7 +24,7 @@ export const ApproveCardForTransferStep = ({ setPassable, selectedCard }) => {
         <div>
             <Grid container spacing={3}>
                 <Grid item xs={12}>
-                    <Paper style={{width: "600px"}}>
+                    <Paper style={{ width: "600px" }}>
                         <Typography>You picked the card: {selectedCard.url}</Typography>
                     </Paper>
                 </Grid>
@@ -46,9 +39,9 @@ export const ApproveCardForTransferStep = ({ setPassable, selectedCard }) => {
                     <ListItem dense>
                         <ListItemText>I approved the NFT Transfer</ListItemText>
                         <Checkbox
-                        checked={approved}
-                        onChange={handleApproveClickCheckbox}
-                        inputProps={{ 'aria-label': 'controlled' }}
+                            checked={approved}
+                            onChange={handleApproveClickCheckbox}
+                            inputProps={{ 'aria-label': 'controlled' }}
                         />
                     </ListItem>
                 </Grid>
@@ -56,11 +49,3 @@ export const ApproveCardForTransferStep = ({ setPassable, selectedCard }) => {
         </div>
     );
 }
-
-// const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-//     setChecked(event.target.checked);
-//   };
-
-//   return (
-    
-//   );
