@@ -26,3 +26,4 @@ pnpm-debug.log*
 /build
 typechain
 backend/src/contracts.json
+demo_daar_blockchain.mp4
